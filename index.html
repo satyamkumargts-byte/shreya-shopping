@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover thoughtfully picked fashion, tech, beauty, and home finds at Shreya Shopping. Shop everyday favourites with convenient delivery across India."
+    />
+    <title>Shreya Shopping | Lovely Finds for Everyday Living</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@29.5.4/dist/css/intlTelInput.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="Shreya Shopping home">
+          <img class="brand-logo" src="logo.svg" alt="" />
+          <span>Shreya Shopping</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#shop">Shop</a>
+          <a href="#collections">Collections</a>
+          <a href="#deals">Deals</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <label class="search-box" aria-label="Search products">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10.5 3a7.5 7.5 0 015.88 12.8l4.4 4.4 1.4-1.4-4.4-4.4A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z"/>
+            </svg>
+            <input type="search" placeholder="Search" aria-label="Search products" />
+          </label>
+
+          <a class="cart-button" href="#checkout" aria-label="Shopping cart">
+            <span class="sr-only">Cart</span>
+            <span class="cart-count">0</span>
+          </a>
+          <button class="account-button" id="accountOpen" type="button">Log in</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">A little something lovely, every day</p>
+            <h1>Find your new everyday favourites.</h1>
+            <p class="lead">
+              Explore feel-good fashion, thoughtful home finds, beauty favourites, and clever little upgrades — all picked with you in mind.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#shop">Shop now</a>
+              <a class="btn btn-secondary" href="#deals">Explore deals</a>
+            </div>
+
+            <ul class="hero-stats" aria-label="Shreya Shopping stats">
+              <li>
+                <strong>Curated</strong>
+                <span>Everyday essentials</span>
+              </li>
+              <li>
+                <strong>Private</strong>
+                <span>Encrypted order details</span>
+              </li>
+              <li>
+                <strong>Flexible</strong>
+                <span>Payment options</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Featured product showcase">
+            <div class="floating-card product-showcase">
+              <img
+                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80"
+                alt="Model wearing a contemporary outfit"
+              />
+              <div class="product-meta">
+                <div>
+                  <span class="meta-tag">Customer favourite</span>
+                  <h2>Velora Knit Set</h2>
+                </div>
+                <div class="price-row">
+                  <strong>₹2,499</strong>
+                  <span>Featured</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-card badge-card">Free delivery on orders ₹1,999+</div>
+            <div class="floating-card mini-card">
+              <span>Find</span>
+              <strong>Essentials</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="container features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">🚚</span>
+            <div>
+              <h3>Free delivery</h3>
+              <p>On orders of ₹1,999 or more</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📦</span>
+            <div>
+              <h3>Orders in your account</h3>
+              <p>Review your recent orders whenever you sign in</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">↩️</span>
+            <div>
+              <h3>Delivery details</h3>
+              <p>Enter your address and delivery instructions at checkout</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories" id="collections">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Shop by category</p>
+            <h2>Fresh picks for every moment.</h2>
+          </div>
+
+          <div class="category-grid">
+            <a class="category-item trending" href="#shop" data-category-filter="women" aria-label="Shop fashion products">
+              <div>
+                <p>Fashion</p>
+                <h3>Style edit</h3>
+              </div>
+              <span>View collection</span>
+            </a>
+
+            <a class="category-item tech" href="#shop" data-category-filter="tech" aria-label="Shop tech products">
+              <div>
+                <p>Tech</p>
+                <h3>Smart living</h3>
+              </div>
+              <span>Explore</span>
+            </a>
+
+            <a class="category-item home" href="#shop" data-category-filter="home" aria-label="Shop home products">
+              <div>
+                <p>Home</p>
+                <h3>Cozy essentials</h3>
+              </div>
+              <span>Shop now</span>
+            </a>
+
+            <a class="category-item beauty" href="#shop" data-category-filter="beauty" aria-label="Shop beauty products">
+              <div>
+                <p>Beauty</p>
+                <h3>Glow routine</h3>
+              </div>
+              <span>Discover</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="products" id="shop">
+        <div class="container">
+          <div class="section-head split-head">
+            <div>
+              <p class="eyebrow">Trending now</p>
+              <h2>Featured products</h2>
+            </div>
+
+            <div class="filter-row" aria-label="Product filters">
+              <button type="button" class="filter active">All</button>
+              <button type="button" class="filter">Women</button>
+              <button type="button" class="filter">Tech</button>
+              <button type="button" class="filter">Home</button>
+              <button type="button" class="filter">Beauty</button>
+            </div>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card" data-category="women">
+              <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Woven dress" />
+              <span class="product-badge">Featured</span>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span>Women</span>
+                  <span>Featured</span>
+                </div>
+                <h3>Velora Knit Set</h3>
+                <div class="price-row">
+                  <strong>₹2,499</strong>
+                  <span>₹3,499</span>
+                </div>
+                <button class="add-cart" type="button">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="tech">
+              <img src="https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?auto=format&fit=crop&w=900&q=80" alt="Smartwatch" />
+              <span class="product-badge new">Featured</span>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span>Tech</span>
+                  <span>Featured</span>
+                </div>
+                <h3>Luma Smartwatch</h3>
+                <div class="price-row">
+                  <strong>₹3,999</strong>
+                  <span>₹4,999</span>
+                </div>
+                <button class="add-cart" type="button">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="home">
+              <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Decorative lamp" />
+              <span class="product-badge">Featured</span>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span>Home</span>
+                  <span>Featured</span>
+                </div>
+                <h3>Halo Accent Lamp</h3>
+                <div class="price-row">
+                  <strong>₹1,499</strong>
+                  <span>₹1,999</span>
+                </div>
+                <button class="add-cart" type="button">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="beauty">
+              <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80" alt="Beauty products" />
+              <span class="product-badge">Featured</span>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span>Beauty</span>
+                  <span>Featured</span>
+                </div>
+                <h3>Glow Ritual Kit</h3>
+                <div class="price-row">
+                  <strong>₹1,299</strong>
+                  <span>₹1,799</span>
+                </div>
+                <button class="add-cart" type="button">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="home">
+              <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Modern chair" />
+              <span class="product-badge sale">-30%</span>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span>Home</span>
+                  <span>Featured</span>
+                </div>
+                <h3>Arc Lounge Chair</h3>
+                <div class="price-row">
+                  <strong>₹8,499</strong>
+                  <span>₹11,999</span>
+                </div>
+                <button class="add-cart" type="button">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="tech">
+              <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=900&q=80" alt="Wireless headphones" />
+              <span class="product-badge new">Featured</span>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span>Tech</span>
+                  <span>Featured</span>
+                </div>
+                <h3>Echo Audio Pro</h3>
+                <div class="price-row">
+                  <strong>₹2,999</strong>
+                  <span>₹3,999</span>
+                </div>
+                <button class="add-cart" type="button">Add to cart</button>
+              </div>
+            </article>
+          </div>
+          <p class="product-search-empty" id="productSearchEmpty" hidden>No products match your search.</p>
+        </div>
+      </section>
+
+      <section class="promo" id="deals">
+        <div class="container promo-grid">
+          <div class="promo-copy">
+            <p class="eyebrow">Featured offer</p>
+            <h2>Explore selected offers and everyday essentials.</h2>
+            <p>
+              Upgrade your daily routine with elevated picks for home, style, and wellness — curated for a smarter, simpler life.
+            </p>
+            <a href="#shop" class="btn btn-primary">Shop the sale</a>
+          </div>
+
+          <p class="promo-availability">Explore the featured products below.</p>
+        </div>
+      </section>
+
+      <section class="reviews" id="reviews">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Shopping made simple</p>
+            <h2>Useful features for every order.</h2>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="review-card">
+              <div class="stars">Your orders, together</div>
+              <p>Sign in to place orders and review your recent purchases from your account.</p>
+              <div class="review-user">
+                <strong>Order history</strong>
+                <span>Available whenever you sign in.</span>
+              </div>
+            </article>
+
+            <article class="review-card">
+              <div class="stars">Payment choice</div>
+              <p>Choose UPI, bank transfer, or cash on delivery when placing an order.</p>
+              <div class="review-user">
+                <strong>Flexible payment</strong>
+                <span>Non-cash transfers are verified manually.</span>
+              </div>
+            </article>
+
+            <article class="review-card">
+              <div class="stars">International numbers</div>
+              <p>Select your country code when entering a contact or delivery phone number.</p>
+              <div class="review-user">
+                <strong>International phone support</strong>
+                <span>Country codes are formatted automatically.</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter" id="contact">
+        <div class="container newsletter-box">
+          <div>
+            <p class="eyebrow">Stay in the loop</p>
+            <h2>Get insider access to new drops and exclusive offers.</h2>
+          </div>
+
+          <form class="newsletter-form">
+            <label class="sr-only" for="email">Email address</label>
+            <input id="email" type="email" placeholder="Enter your email" required />
+            <button type="submit">Notify me</button>
+          </form>
+          <p class="newsletter-message" id="newsletterMessage" role="status" aria-live="polite" hidden></p>
+        </div>
+      </section>
+
+      <section class="checkout" id="checkout">
+        <div class="container checkout-grid">
+          <div class="checkout-panel">
+            <p class="eyebrow">Checkout</p>
+            <h2>Complete your purchase</h2>
+            <div class="payment-details">
+              <h3>Order information</h3>
+              <p>Your delivery and order details are saved with your account in Supabase without encryption. Your signed-in account can view its own orders; Supabase project administrators may also access this information.</p>
+              <p class="payment-note">Catalog prices are sample amounts in INR. Orders are saved as pending; this site does not collect or verify payments.</p>
+            </div>
+
+            <form class="checkout-form" id="checkoutForm">
+              <div class="field-row">
+                <div class="form-field">
+                  <label for="fullName">Full name</label>
+                  <input id="fullName" type="text" placeholder="Your full name" required />
+                </div>
+                <div class="form-field">
+                  <label for="phone">Phone number</label>
+                  <input id="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="98765 43210" required />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="emailAddress">Email address</label>
+                <input id="emailAddress" type="email" placeholder="you@example.com" required />
+              </div>
+
+              <div class="form-field">
+                <label for="address">Delivery address</label>
+                <textarea id="address" rows="3" placeholder="House number, street, area, landmark" required></textarea>
+              </div>
+
+              <div class="field-row">
+                <div class="form-field">
+                  <label for="city">City</label>
+                  <input id="city" type="text" placeholder="City" required />
+                </div>
+                <div class="form-field">
+                  <label for="state">State</label>
+                  <input id="state" type="text" placeholder="State" required />
+                </div>
+              </div>
+
+              <div class="field-row">
+                <div class="form-field">
+                  <label for="zip">Pin code</label>
+                  <input id="zip" type="text" placeholder="Postal code" required />
+                </div>
+                <div class="form-field">
+                  <label for="country">Country</label>
+                  <input id="country" type="text" autocomplete="country-name" value="India" required />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="deliveryNote">Delivery note</label>
+                <textarea id="deliveryNote" rows="2" placeholder="Optional instructions for delivery"></textarea>
+              </div>
+
+              <div class="form-field">
+                <label for="paymentMethod">Payment method</label>
+                <select id="paymentMethod" required>
+                  <option value="">Select payment option</option>
+                  <option value="upi">UPI</option>
+                  <option value="bank">Bank transfer</option>
+                  <option value="cod">Cash on Delivery</option>
+                </select>
+              </div>
+
+              <div class="payment-details" id="upiDetails" hidden>
+                <h3>Pay with UPI</h3>
+                <p>Send your payment to this UPI ID, then place your order.</p>
+                <p><strong>UPI ID:</strong> <span>satyam-k03@ptaxis</span></p>
+                <a class="upi-pay-link" href="upi://pay?pa=satyam-k03%40ptaxis&amp;pn=Shreya%20Shopping">Open your UPI app</a>
+                <p class="payment-note">Your payment will be verified manually. Do not share your UPI PIN or OTP.</p>
+              </div>
+
+              <div class="payment-details" id="bankDetails" hidden>
+                <h3>Bank transfer details</h3>
+                <p><strong>Account number:</strong> <span>606901700077511</span></p>
+                <p><strong>IFSC code:</strong> <span>PUNB0606900</span></p>
+                <p class="payment-note">Transfer the order amount to this account. Your payment will be verified manually.</p>
+              </div>
+
+              <div class="payment-details" id="codDetails" hidden>
+                <h3>Cash on delivery</h3>
+                <p>Pay the delivery agent in cash when your order arrives.</p>
+              </div>
+            </form>
+          </div>
+
+          <aside class="order-summary">
+            <h3>Order summary</h3>
+
+            <div class="order-items" id="orderItems">
+              <p id="emptyCartMessage">Your cart is empty. Add products to get started.</p>
+            </div>
+
+            <div class="summary-box">
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">₹0</strong>
+              </div>
+              <div class="summary-row">
+                <span>Shipping</span>
+                <strong id="cartShipping">₹0</strong>
+              </div>
+              <div class="summary-row total">
+                <span>Total</span>
+                <strong id="cartTotal">₹0</strong>
+              </div>
+            </div>
+
+            <button type="submit" form="checkoutForm" class="btn btn-primary checkout-submit">Place order</button>
+            <p class="order-confirmation" id="checkoutMessage" role="status" aria-live="polite" hidden></p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="account-dialog" id="accountDialog" aria-labelledby="accountTitle">
+      <div class="account-dialog-header">
+        <div>
+          <p class="eyebrow">Shreya Shopping</p>
+          <h2 id="accountTitle">Welcome back</h2>
+        </div>
+        <button class="dialog-close" id="accountClose" type="button" aria-label="Close account dialog">&times;</button>
+      </div>
+
+      <div class="account-tabs" role="group" aria-label="Account options">
+        <button class="account-tab active" id="loginTab" type="button" aria-pressed="true">Log in</button>
+        <button class="account-tab" id="signupTab" type="button" aria-pressed="false">Create account</button>
+      </div>
+
+      <form class="account-form" id="loginForm">
+        <p>Sign in to continue to your account.</p>
+        <div class="form-field">
+          <label for="loginEmail">Email address (your user ID)</label>
+          <input id="loginEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-field">
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Your password" required />
+        </div>
+        <button class="btn btn-primary account-submit" type="submit">Log in</button>
+        <button class="text-button" id="forgotPasswordOpen" type="button">Forgot password? Reset by email</button>
+      </form>
+
+      <form class="account-form" id="forgotPasswordForm" hidden>
+        <p>Enter your account email and we will send you a password reset link.</p>
+        <div class="form-field">
+          <label for="resetEmail">Email address</label>
+          <input id="resetEmail" type="email" autocomplete="email" placeholder="you@example.com" required />
+        </div>
+        <button class="btn btn-primary account-submit" id="sendPasswordReset" type="submit">Send password reset link</button>
+        <button class="text-button" id="backToLogin" type="button">Back to log in</button>
+      </form>
+
+      <form class="account-form" id="passwordUpdateForm" hidden>
+        <p>Choose a new password for your account.</p>
+        <div class="form-field">
+          <label for="newPassword">New password</label>
+          <input id="newPassword" type="password" autocomplete="new-password" minlength="8" required />
+        </div>
+        <button class="btn btn-primary account-submit" type="submit">Update password</button>
+      </form>
+
+      <form class="account-form" id="signupForm" hidden>
+        <p>Create an account to make shopping easier.</p>
+        <div class="form-field">
+          <label for="signupName">Full name</label>
+          <input id="signupName" name="name" type="text" autocomplete="name" placeholder="Your full name" required />
+        </div>
+        <div class="form-field">
+          <label for="signupEmail">Email address (your user ID)</label>
+          <input id="signupEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-field">
+          <label for="signupPhone">Mobile number (include country code)</label>
+          <input id="signupPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="98765 43210" required />
+        </div>
+        <div class="form-field">
+          <label for="signupPassword">Create password</label>
+          <input id="signupPassword" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required />
+        </div>
+        <button class="btn btn-primary account-submit" type="submit">Create account</button>
+      </form>
+      <section class="account-panel" id="accountPanel" hidden>
+        <p>Signed in as <strong id="accountEmail"></strong></p>
+        <div class="account-orders">
+          <h3>My recent orders</h3>
+          <div id="accountOrders"><p>Your orders will appear here.</p></div>
+        </div>
+        <button class="account-signout" id="signOutButton" type="button">Log out</button>
+      </section>
+      <p class="account-message" id="accountMessage" role="status" aria-live="polite" hidden></p>
+      <p class="account-demo-note">Order details are stored unencrypted in Supabase. Row-level security limits customer access to orders on their own account; Supabase project administrators may access stored order details.</p>
+    </dialog>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="#home">
+            <img class="brand-logo" src="logo.svg" alt="" />
+            <span>Shreya Shopping</span>
+          </a>
+          <p>Thoughtful fashion, home, beauty, and everyday finds — picked with you in mind.</p>
+        </div>
+
+        <div>
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="#shop">New arrivals</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#deals">Deals</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home">About</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Follow</h3>
+          <ul>
+            <li><a href="https://instagram.com/ll_._satyam_._ll" target="_blank" rel="noreferrer">Instagram</a></li>
+            <li>Pinterest (coming soon)</li>
+            <li>Facebook (coming soon)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© <span id="year"></span> Shreya Shopping</span>
+        <span>Payment is verified manually; orders are not dispatched until confirmed.</span>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@29.5.4/dist/js/intlTelInput.min.js"></script>
+    <script src="supabase-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
